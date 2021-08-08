@@ -59,7 +59,7 @@ let questionsM = [
     {
         numbM: 6,
         questionM: "Which Command Will Create a New Object Instance for the Person Class Called 'Student'?",
-        answerM: "Varchar",
+        answerM: "let student = new Person();",
         optionsM: [
             "let student = Person();",
             "let student = construct Person();",
@@ -85,7 +85,7 @@ let questionsM = [
         optionsM: [
             "let afterDiscount = function(price) { return price * 0.85; }",
             "let function = afterDiscount(price) { return price * 0.85; };",
-            "let afterDiscount = function(price) { return price * 0.85; }",
+            "varChar afterDiscount = function(price) { return price * 0.85; }",
             "afterDiscount = function(price) { return price * 0.85; };"
         ]
     }

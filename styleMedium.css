@@ -304,7 +304,7 @@ display: block;
     margin-bottom: 0;
 }
 
-.option_listM .optionM .iconM{
+.option_listM .optionM .icon{
 height: 26px;
 width: 26px;
 border: 2px solid transparent;
@@ -342,7 +342,7 @@ pointer-events: none;
 }
 
 .quiz_boxM footer{
-    height: 40px;
+    height: 60px;
     width: 100%;
     padding: 0 30px;
     display: flex;
