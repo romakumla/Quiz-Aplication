@@ -11,6 +11,9 @@ let next_btnM = document.querySelector(".next_btnM");
 let option_listM = document.querySelector(".option_listM");
 let timeCountM = document.querySelector(".timer_secM");
 let timeLineM = document.querySelector(".time_lineM");
+let result_boxM = document.querySelector(".result_boxM");
+let restart_quizM = document.querySelector(".restartM");
+let quit_quizM = document.querySelector(".quitM");
 
 strat_btn.onclick = () => {
     start_box.classList.add("hide");
@@ -34,8 +37,11 @@ continue_btnM.onclick = () => {
 let que_countM = 0;
 let que_numM = 1;
 let counterM;
+let counterLineM;
 let timeValueM = 45;
 let widthValueM = 0;
+let userScoreM = 0;
+
 
 
 //Next Btn click
@@ -49,11 +55,32 @@ next_btnM.onclick = () => {
         startTimerM(timeValueM);
         clearInterval(counterLineM);
         startTimerLineM(widthValueM);
+        next_btnM.style.display = "none";
     } else {
         console.log("Question Completed");
+        showResultBoxM();
     }
 }
 
+restart_quizM.onclick = () => {
+    start_box.classList.remove("hide");
+    result_boxM.classList.remove("show");
+    let que_countM = 0;
+    let que_numM = 1;
+    let timeValueM = 45;
+    let widthValueM = 0;
+    let userScoreM = 0;
+    showQuestinM(que_countM);
+    queCounteM(que_numM);
+    clearInterval(counterM);
+    startTimerM(timeValueM);
+    clearInterval(counterLineM);
+    startTimerLineM(widthValueM);
+    next_btnM.style.display = "none";
+}
+quit_quizM.onclick = () => {
+    window.location.reload();
+}
 
 //Get Questions and options
 function showQuestinM(index) {
@@ -74,11 +101,14 @@ let tickIconM = '<div class="icon tick"><i class="fas fa-check"></i></div>'
 let crossIconM = '<div class="icon cross"><i class="fas fa-times"></i></div>'
 
 function optionMSelected(answerM) {
+    clearInterval(counterLineM);
     clearInterval(counterM);
     let userAnsM = answerM.textContent;
     let correctAnsM = questionsM[que_countM].answerM;
     let allOptionsM = option_listM.children.length;
     if (userAnsM == correctAnsM) {
+        userScoreM += 2;
+        console.log(userScoreM);
         answerM.classList.add("correct")
         console.log("Answer is Correct!");
         answerM.insertAdjacentHTML("beforeend", tickIconM);
@@ -94,18 +124,36 @@ function optionMSelected(answerM) {
                 option_listM.children[i].insertAdjacentHTML("beforeend", tickIconM);
             }
         }
-
     }
-
-
-
-
 
     //Disabled Click on Options After First Click
     for (let i = 0; i < allOptionsM; i++) {
         option_listM.children[i].classList.add("disabled");
     }
+    next_btnM.style.display = "block";
+}
 
+
+//Show Result Box
+function showResultBoxM() {
+    quiz_boxM.classList.remove("show");
+    result_boxM.classList.add("show");
+    let scoreTextM = document.querySelector(".score_textM");
+    if (userScoreM > 3) {
+        let scoreTagM = '<span>Congretulation, You Got <p>' + userScoreM + '</p>out of <p>' + questionsM.length * 2 + '</p></span>';
+        scoreTextM.innerHTML = scoreTagM;
+        console.log(userScoreM);
+    }
+    else if (userScoreM > 1) {
+        let scoreTagM = '<span>Nice!, You Got Only<p>' + userScoreM + '</p>out of <p>' + questionsM.length * 2 + '</p></span>';
+        scoreTextM.innerHTML = scoreTagM;
+        console.log(userScoreM);
+    }
+    else {
+        let scoreTagM = '<span>And Sorry, You Got only<p>' + userScoreM + '</p>out of <p>' + questionsM.length * 2 + '</p></span>';
+        scoreTextM.innerHTML = scoreTagM;
+        console.log(userScoreM);
+    }
 }
 
 // Que Count
@@ -125,11 +173,13 @@ function startTimerM(timeM) {
         timeM--;
         if (timeM < 9) {
             let addZero = timeCountM.textContent;
+            let addText
             timeCountM.textContent = "0" + addZero;
         }
         if (timeM < 0) {
             clearInterval(counterM);
             timeCountM.textContent = "00";
+
             console.log("Your Time Has Finished")
         }
     }

@@ -365,7 +365,7 @@ pointer-events: none;
 }
 
 .quiz_boxM footer .next_btnM{
-    display: block;
+    display: none;
     height: 40px;
     padding: 0 13px;
     font-size: 15px;
