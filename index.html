@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Links-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleMedium.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="script.js" defer></script>
+    <script src="scriptMedium.js" defer></script>
+    <script src="question.js" defer></script>
+    <script src="questionMeidum.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Start Box-->
+    <div class="start_box">
+        <div class="inputs">
+            <input type="text" id="firstName" placeholder="Enter Name" class="firstName" value="">
+            <input type="text" id="lastName" placeholder="Last Name" class="lastName" value="">
+            <button class="start_btn">Start Quiz</button>
+        </div>
+    </div>
+
+    <!--Level Buttons-->
+    <div class="levelBox">
+        <div class="leveltext">
+            <p class="level_text"></p>
+        </div>
+        <div class="level_box">
+            <div><button class="easy">Easy</button></div>
+            <div><button class="medium">Medium</button></div>
+            <div><button class="medium">Hard</button></div>
+        </div>
+    </div>
+
+    <!--Easy Section-->
+    <!-- Easy Info box-->
+    <div class="info_box">
+        <div class="info_title">Some Ruls of the Easy Level Quiz</div>
+        <div class="info_list">
+            <div class="info">1. You will have only <span>60 seconds</span> per each question.</div>
+            <div class="info">2. Once you select your answer, you can't reselect.</div>
+            <div class="info">3. You can't select any options once time goes of.</div>
+            <div class="info">4. You can't exit from Quiz while you're playng.</div>
+            <div class="info">5. You will get <span>1 points</span> on the basis on your correct answer.</div>
+            <div class="buttons">
+                <button class="Exit">Exit Quiz</button>
+                <button class="continue">continue Quiz</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Easy Quiz box-->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Easy Quiz Applicaion</div>
+            <div class="timer">
+                <div class="time_text">time left</div>
+                <div class="timer_sec">15</div>
+                <div class="time_line"></div>
+            </div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!--<span>What Does HTML Stand For</span>-->
+            </div>
+            <div class="option_list">
+                <!--<div class="option">
+                    <span>Hyper Text Preprocessor</span>
+                    <div class="icon tick"><i class="fas fa-check"></i></div>
+                </div>
+                <div class="option">
+                    <span>Hyper Text Markup Language</span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="option">
+                    <span>Hyper Text Multiple Language</span>
+                </div>
+                <div class="option">
+                    <span>Hyper Tool Multi Language</span>
+                </div>
+            -->
+            </div>
+            <footer>
+                <div class="total_que">
+                    <!-- <span>
+                        <p>2</p>of<p>5</p>Questions
+                    </span>-->
+                </div>
+                <button class="next_btn">Next</button>
+            </footer>
+        </section>
+    </div>
+
+
+
+    <!--Result Box-->
+    <div class="result_box">
+        <div class="icon"><i class="fas fa-crown"></i></div>
+        <div class="complete_text">You have completed the Quiz!</div>
+        <div class="score_text">
+            <!--<span>and sorry, you got only <p>2</p> out of <p>5</p></span>-->
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit">Quit Quiz</button>
+        </div>
+    </div>
+
+
+    <!--Medium Section-->
+    <!--Quiz box Medium-->
+    <div class="quiz_boxM">
+        <header>
+            <div class="titleM">Medium Quiz Applicaion</div>
+            <div class="timerM">
+                <div class="time_textM">time left</div>
+                <div class="timer_secM">45</div>
+                <div class="time_lineM"></div>
+            </div>
+        </header>
+        <section>
+            <div class="que_textM">
+                <!--<span>What Does HTML Stand For</span>-->
+            </div>
+            <div class="option_listM">
+                <!--<div class="optionM">
+                    <span>Hyper Text Preprocessor</span>
+                    <div class="iconM tick"><i class="fas fa-check"></i></div>
+                </div>
+                <div class="optionM">
+                    <span>Hyper Text Markup Language</span>
+                    <div class="iconM cross"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="optionM">
+                    <span>Hyper Text Multiple Language</span>
+                </div>
+                <div class="optionM">
+                    <span>Hyper Text Multiple Language</span>
+                </div>
+                
+            
+            </div>-->
+                <footer>
+                    <div class="total_queM">
+                        <!--<span>
+                            <p>2</p>of<p>5</p>Questions
+                        </span>-->
+                    </div>
+                    <button class="next_btnM">Next</button>
+                </footer>
+        </section>
+    </div>
+
+    <!--Info Bosx Medium-->
+    <div class="info_boxM">
+        <div class="info_titleM">Some Ruls of the Medium Level Quiz</div>
+        <div class="info_listM">
+            <div class="infoM">1. You will have only <span>45 seconds</span> per each question.</div>
+            <div class="infoM">2. Once you select your answer, you can't reselect.</div>
+            <div class="infoM">3. You can't select any options once time goes of.</div>
+            <div class="infoM">4. You can't exit from Quiz while you're playng.</div>
+            <div class="infoM">5. You will get <span>2 points</span> on the basis on your correct answer.</div>
+            <div class="buttonsM">
+                <button class="exitM">Exit Quiz</button>
+                <button class="continueM">continue Quiz</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Result Box Medium-->
+    <div class="result_boxM">
+        <div class="icon"><i class="fas fa-crown"></i></div>
+        <div class="complete_textM">You have completed the Quiz!</div>
+        <div class="score_textM">
+            <!--<span>and sorry, you got only <p>2</p> out of <p>5</p></span>-->
+        </div>
+        <div class="buttonsM">
+            <button class="restartM">Replay Quiz</button>
+            <button class="quitM">Quit Quiz</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,456 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #f6fff8;
+}
+.start_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    padding: 10px;
+    background: #9ba9ff;
+    width: 550px;
+    border-radius: 5px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.start_box.hide{
+    display: none
+}
+
+.start_box input{
+    border-radius: 5px;
+    border-color: #a9d6e5;
+    outline: none;
+    border-width: 2px solid;
+    width: 200px;
+    height: 35px;
+    background: #f6fff8;;
+}
+.start_box button{
+    height: auto;
+    font-size: 15px;
+    font-weight: 600;
+    color: #474056;
+    background: #a9d6e5;
+    padding: 8px 15px;
+    outline: none;
+    border-color: #a9d6e5;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.start_box button.active{
+    pointer-events: none;
+    background: #fffffc;
+}
+
+/*LevelBox*/
+.levelBox{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 540px;
+    background: #fff;
+    border-radius: 5px;
+}
+.levelBox.show{
+    display: block;
+}
+
+.level_box{
+    padding: 5px;
+    background: #9ba9ff;
+    width: 550px;
+    border-radius: 5px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border-color: #a9d6e5;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.level_box button{
+    height: auto;
+    font-size: 15px;
+    font-weight: 600;
+    color: #474056;
+    background: #a9d6e5;
+    padding: 15px 30px;
+    outline: none;
+    border: 1 solid #474056;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.leveltext{
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.level_text{
+    font-size: 20px;
+    font-weight: 600;
+    color: #474056;
+    position: absolute;
+    text-align: center;
+    margin:15px 0 10px 0;
+}
+
+
+
+
+
+
+/*Info Box*/
+.info_boxM{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+    padding: 10px;
+    background: #9ba9ff;
+    width: 550px;
+    height: 280px;
+    border-radius: 5px;
+}
+    
+.info_boxM.show{
+display: block;
+}
+
+.info_titleM{
+    height: 50px;
+    width: 100%;
+    border-bottom: 1.5px solid #474056;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 35px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #474056;
+}
+
+.info_listM{
+    padding: 15px 35px;
+}
+.infoM{
+    margin: 5 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: #474056;
+    padding-bottom: 10px;
+}
+.infoM span{
+    font-weight: 600;
+    color: #10002b;
+}
+.info_boxM .buttonsM {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 1.5px solid #474056;
+}
+
+.info_boxM .buttonsM button{
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    outline: none;
+    border: 1 solid #474056;
+    border-radius: 5px;
+    color: #474056;
+    background: #a9d6e5;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+/*Quiz Box*/
+
+.quiz_boxM{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+    width: 550px;
+    background: #a9d6e5;
+    border-radius: 5px;
+}
+.quiz_boxM.show{
+    display: block;
+}
+.quiz_boxM header{
+    position: relative;
+    z-index: 99;
+    height: 70px;
+    width: 100%;
+    padding: 0 30px;
+    background: #a9d6e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    border-bottom: 1.5px solid #474056; 
+}
+
+.quiz_boxM header .titleM{
+    font-size: 20px;
+    font-weight: 600;
+    color: #474056;
+}
+
+.quiz_boxM header .timerM{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+    width: 145px;
+    background: #cce5ff;
+    border: 1px solid #474056;
+    border-radius: 5px;
+    padding: 0 8px;
+}
+
+.quiz_boxM header .timerM .time_textM{
+    font-size: 17px;
+    font-weight: 600;
+    user-select: none;
+    color: #474056;
+}
+
+.quiz_boxM header .timerM .timer_secM{
+    font-size: 18px;
+    font-weight: 500;
+    background: #474056;
+    height: 30px;
+    width: 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid #474056;
+    user-select: none;
+}
+
+.quiz_boxM header .time_lineM{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 3px;
+    background: #474056;
+}
+
+.quiz_boxM section{
+    padding: 25px 30px 20px 30px;
+    background: #cce5ff;
+}
+
+.quiz_boxM section .que_textM{
+    font-size: 25px;
+    font-weight: 600;
+    color: #474056;
+}
+
+.quiz_boxM section .option_listM{
+    padding: 20px 0;
+    display: block;
+    color: #474056;
+}
+
+.quiz_boxM section .option_listM .optionM{
+    background: #cce5ff;
+    border: 1px solid #474056;
+    border-radius: 5px;
+    color: #474056;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+.option_listM .optionM:last-child{
+    margin-bottom: 0;
+}
+
+.option_listM .optionM .iconM{
+height: 26px;
+width: 26px;
+border: 2px solid transparent;
+border-radius: 50%;
+text-align: center;
+font-size: 13px;
+line-height: 24px;
+pointer-events: none;
+}
+
+.option_listM .optionM .icon.tick{
+    color: #23903c;
+    border-color: #23903c ;
+    background: #d4edda;
+}
+
+.option_listM .optionM .icon.cross{
+    color: #a42834;
+    border-color: #a42834 ;
+    background: #f8d7da;
+}
+
+.option_listM .optionM.correct{
+    color: #155724;
+    background: #d4edda;
+    border-color: #c3e6cb ;
+}
+.option_listM .optionM.incorrect{
+    color: #721c24;
+    background: #f8d7da;
+    border-color: #f5c6cb ;
+}
+.option_listM .optionM.disabled{
+    pointer-events: none;
+}
+
+.quiz_boxM footer{
+    height: 40px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quiz_boxM footer .total_queM span{
+    display: flex;
+    user-select: none;
+}
+
+.quiz_boxM footer .total_queM span p{
+    font-weight: 500;
+    padding: 0 5px;
+}
+
+.total_queM span p:first-child{
+    padding-left: 0;
+}
+
+.quiz_boxM footer .next_btnM{
+    display: block;
+    height: 40px;
+    padding: 0 13px;
+    font-size: 15px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    color: #474056;
+    background: #cce5ff;
+    border-radius: 5px;
+    border: 1.5px solid #474056;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+/*Result Box*/
+.result_boxM{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 0.3s ease;
+    width: 450px;
+    background-color: #a9d6e5;
+    padding: 25px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translate(-50%, -50%) scale(0.9);
+    display: none;
+}
+.result_boxM.show{
+    display: block;
+}
+
+.result_boxM .icon{
+    font-size: 100px;
+    color: #474056;
+    margin-bottom: 10px;
+}
+
+.result_boxM .complete_textMedium{
+    font-size: 20px;
+    font-weight: 500;
+    color: #474056;
+}
+
+.result_boxM .score_textMedium span{
+    display: flex;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    color: #474056;
+}
+
+.score_textM span p{
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    padding: 0 4px;
+    color: #474056;
+}
+
+.result_boxM .buttonsM{
+    display: flex;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+.result_boxM .buttonsM button{
+    margin: 0 10px;
+    height: 45px;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid #474056;
+    color: #474056;
+    background: #a9d6e5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
