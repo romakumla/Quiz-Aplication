@@ -84,7 +84,7 @@ let questionsH = [
         answerH: "document.getElementsByClassName('myClass');",
         optionsH: [
             "document.getElementById('#myId');",
-            "document.getElementsByTagName('<h1>');",
+            "document.getElementsByTagName('h1');",
             "document.getElementsByClassName('myClass');",
             "document.getElementsById('myId');"
         ]
