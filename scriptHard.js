@@ -16,7 +16,7 @@ let timeOffH = document.querySelector(".time_textH");
 
 exit_btnH.onclick = () => {
     info_boxH.classList.remove('show');
-    start_box.classList.remove("hide");
+    startBox.classList.remove("hide");
 }
 
 continue_btnH.onclick = () => {
@@ -136,23 +136,26 @@ function optionHSelected(answerH) {
 
 //Show Result Box
 function showResultBoxH() {
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
     quiz_boxH.classList.remove("show");
     result_boxH.classList.add("show");
     let scoreTextH = document.querySelector(".score_textH");
     if (userScoreH > 6) {
-        let scoreTagH = '<span>Congretulation, You Got <p>' + userScoreH + '</p>out of <p>' + questionsH.length * 3 + '</p></span>';
+        let scoreTagH = '<span>Congretulation! <p>' + firstName + '</p> You Got <p>' + userScoreH + '</p>out of <p>' + questionsH.length * 3 + '</p></span>';
         scoreTextH.innerHTML = scoreTagH;
-        console.log(userScoreH);
+        console.log(`User: ${firstName} ${lastName} Has Gained ${userScoreH} Points`);
+
     }
     else if (userScoreH > 1) {
-        let scoreTagH = '<span>Nice!, You Got Only<p>' + userScoreH + '</p>out of <p>' + questionsH.length * 3 + '</p></span>';
+        let scoreTagH = '<span>Nice! <p>' + firstName + '</p> You Got Only<p>' + userScoreH + '</p>out of <p>' + questionsH.length * 3 + '</p></span>';
         scoreTextH.innerHTML = scoreTagH;
-        console.log(userScoreH);
+        console.log(`User: ${firstName} ${lastName} Has Gained ${userScoreH} Points`);
     }
     else {
-        let scoreTagH = '<span>And Sorry, You Got only<p>' + userScoreH + '</p>out of <p>' + questionsH.length * 3 + '</p></span>';
+        let scoreTagH = '<span>Sorry! <p>' + firstName + '</p> You Got only<p>' + userScoreH + '</p>out of <p>' + questionsH.length * 3 + '</p></span>';
         scoreTextH.innerHTML = scoreTagH;
-        console.log(userScoreH);
+        console.log(`User: ${firstName} ${lastName} Has Gained ${userScoreH} Points`);
     }
 }
 

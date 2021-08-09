@@ -20,6 +20,7 @@ let firstName = document.getElementById("firstName").value;
 let lastName = document.getElementById("lastName").value;
 let medium_btn = document.querySelector(".medium");
 let hard_btn = document.querySelector(".hard");
+let User = firstName + lastName;
 
 
 start_btn.onclick = () => {
@@ -187,21 +188,26 @@ function optionSelected(answer) {
 
 
 function showResultBox() {
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
     info_box.classList.remove("show");
     quiz_box.classList.remove("show");
     result_box.classList.add("show");
     let scoreText = result_box.querySelector(".score_text");
     if (userScore > 3) {
-        let scoreTag = '<span>and congrats!, you got  <p>' + userScore + '</p> out of <p>' + questions.length + '</p></span>';
+        let scoreTag = '<span>Congratulation! <p>' + firstName + '</p>You Got  <p>' + userScore + '</p> out of <p>' + questions.length + '</p></span>';
         scoreText.innerHTML = scoreTag;
+        console.log(`User: ${firstName} ${lastName} Has Gained ${userScore} Points`);
     }
     else if (userScore > 1) {
-        let scoreTag = '<span>and nice, you got  <p>' + userScore + '</p> out of <p>' + questions.length + '</p></span>';
+        let scoreTag = '<span>Nice!<p>' + firstName + '</p> You Got  <p>' + userScore + '</p> out of <p>' + questions.length + '</p></span>';
         scoreText.innerHTML = scoreTag;
+        console.log(`User: ${firstName} ${lastName} Has Gained ${userScore} Points`);
     }
     else {
-        let scoreTag = '<span>and sorry, you got  <p>' + userScore + '</p> out of <p>' + questions.length + '</p></span>';
+        let scoreTag = '<span>Sorry!<p>' + firstName + '</p> You Got  <p>' + userScore + '</p> out of <p>' + questions.length + '</p></span>';
         scoreText.innerHTML = scoreTag;
+        console.log(`User: ${User} Has Gained ${userScore} Points`);
     }
 };
 //set timer
@@ -217,7 +223,7 @@ function startTimer(time) {
         if (time < 0) {
             clearInterval(counter);
             timeCount.textContent = "00"
-            timeOff.textContent = "Time off"
+            timeOff.textContent = "Time Off"
 
             let correctAns = questions[que_count].answer;
             let allOption = option_list.children.length;

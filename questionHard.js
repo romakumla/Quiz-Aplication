@@ -1,7 +1,7 @@
 let questionsH = [
     {
         numbH: 1,
-        questionH: "What Will the Following Answer: Console.log ('1' + 2 + 3); ?",
+        questionH: "What Will be the Following Answer: Console.log ('1' + 2 + 3); ?",
         answerH: "123",
         optionsH: [
             "14",
@@ -48,12 +48,12 @@ let questionsH = [
     {
         numbH: 5,
         questionH: "Below is the snippet of the code. In which case can it be equal to request.readyState 4? ((request.status === 200) && (request.readyState === 4))",
-        answerH: "A request has been sent, the server has returned the response, and the browser has finished downloading the response data. AJAX Call was successfully implemented",
+        answerH: "Request has been sent, server has returned response, and browser has finished downloading response. AJAX Call was successfully implemented",
         optionsH: [
-            "The request created by us is ready to be sent",
-            "A request has been sent, the server has returned the response, and the browser has finished downloading the response data. AJAX Call was successfully implemented",
-            "The request has been sent, the server has responded and the browser is waiting for our instructions on whether to download the content",
-            "The request has been sent, the server is ready to respond and is waiting for additional instructions from us"
+            "Request created by us is ready to be sent",
+            "Request has been sent, server has returned response, and browser has finished downloading response. AJAX Call was successfully implemented",
+            "Request has been sent, server has responded and browser is waiting for our instructions on whether to download content",
+            "Request has been sent, server is ready to respond and is waiting for additional instructions from us"
         ]
     },
     {
@@ -81,12 +81,12 @@ let questionsH = [
     {
         numbH: 8,
         questionH: "Which is the correct form?",
-        answerH: "document.getElementsByClassName(‘myClass’);",
+        answerH: "document.getElementsByClassName('myClass');",
         optionsH: [
-            "document.getElementById(‘#myId’);",
-            "document.getElementsByTagName(“<h1>”);",
-            "document.getElementsByClassName(‘myClass’);",
-            "document.getElementsById(‘myId’);"
+            "document.getElementById('#myId');",
+            "document.getElementsByTagName('<h1>');",
+            "document.getElementsByClassName('myClass');",
+            "document.getElementsById('myId');"
         ]
     },
     {

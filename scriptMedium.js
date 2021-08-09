@@ -16,7 +16,7 @@ let timeOffM = document.querySelector(".time_textM");
 
 exit_btnM.onclick = () => {
     info_boxM.classList.remove('show');
-    start_box.classList.remove("hide");
+    startBox.classList.remove("hide");
 }
 
 continue_btnM.onclick = () => {
@@ -136,23 +136,25 @@ function optionMSelected(answerM) {
 
 //Show Result Box
 function showResultBoxM() {
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
     quiz_boxM.classList.remove("show");
     result_boxM.classList.add("show");
     let scoreTextM = document.querySelector(".score_textM");
     if (userScoreM > 3) {
-        let scoreTagM = '<span>Congretulation, You Got <p>' + userScoreM + '</p>out of <p>' + questionsM.length * 2 + '</p></span>';
+        let scoreTagM = '<span>Congretulation! <p>' + firstName + '</p>You Got <p>' + userScoreM + '</p>out of <p>' + questionsM.length * 2 + '</p></span>';
         scoreTextM.innerHTML = scoreTagM;
-        console.log(userScoreM);
+        console.log(`User: ${firstName} ${lastName} Has Gained ${userScoreM} Points`);
     }
     else if (userScoreM > 1) {
-        let scoreTagM = '<span>Nice!, You Got Only<p>' + userScoreM + '</p>out of <p>' + questionsM.length * 2 + '</p></span>';
+        let scoreTagM = '<span>Nice!, <p>' + firstName + '</p> You Got Only<p>' + userScoreM + '</p>out of <p>' + questionsM.length * 2 + '</p></span>';
         scoreTextM.innerHTML = scoreTagM;
-        console.log(userScoreM);
+        console.log(`User: ${firstName} ${lastName} Has Gained ${userScoreM} Points`);
     }
     else {
-        let scoreTagM = '<span>And Sorry, You Got only<p>' + userScoreM + '</p>out of <p>' + questionsM.length * 2 + '</p></span>';
+        let scoreTagM = '<span>Sorry! <p>' + firstName + '</p> You Got only<p>' + userScoreM + '</p>out of <p>' + questionsM.length * 2 + '</p></span>';
         scoreTextM.innerHTML = scoreTagM;
-        console.log(userScoreM);
+        console.log(`User: ${firstName} ${lastName} Has Gained ${userScoreM} Points`);
     }
 }
 

@@ -356,7 +356,7 @@ pointer-events: none;
 }
 
 .quiz_box footer .next_btn{
-    display: block;
+    display: none;
     height: 40px;
     padding: 0 13px;
     font-size: 15px;
