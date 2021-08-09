@@ -14,6 +14,7 @@ let timeLineM = document.querySelector(".time_lineM");
 let result_boxM = document.querySelector(".result_boxM");
 let restart_quizM = document.querySelector(".restartM");
 let quit_quizM = document.querySelector(".quitM");
+let timeOffM = document.querySelector(".time_textM");
 
 strat_btn.onclick = () => {
     start_box.classList.add("hide");
@@ -32,6 +33,7 @@ continue_btnM.onclick = () => {
     queCounteM(1);
     startTimerM(45);
     startTimerLineM(0);
+    timeOffM.textContent = "Time Left"
 }
 
 let que_countM = 0;
@@ -55,10 +57,14 @@ next_btnM.onclick = () => {
         startTimerM(timeValueM);
         clearInterval(counterLineM);
         startTimerLineM(widthValueM);
+        timeOffM.textContent = "Time Left"
         next_btnM.style.display = "none";
     } else {
+        clearInterval(counterM);
+        clearInterval(counterLineM);
         console.log("Question Completed");
         showResultBoxM();
+
     }
 }
 
@@ -76,6 +82,7 @@ restart_quizM.onclick = () => {
     startTimerM(timeValueM);
     clearInterval(counterLineM);
     startTimerLineM(widthValueM);
+    timeOffM.textContent = "Time Left"
     next_btnM.style.display = "none";
 }
 quit_quizM.onclick = () => {
@@ -179,8 +186,20 @@ function startTimerM(timeM) {
         if (timeM < 0) {
             clearInterval(counterM);
             timeCountM.textContent = "00";
-
+            timeOffM.textContent = "Time Off"
+            let correctAnsM = questionsM[que_countM].answerM;
+            let allOptionsM = option_listM.children.length;
             console.log("Your Time Has Finished")
+            for (let i = 0; i < allOptionsM; i++) {
+                if (option_listM.children[i].textContent == correctAnsM) {
+                    option_listM.children[i].setAttribute("class", "optionM correct");
+                    option_listM.children[i].insertAdjacentHTML("beforeend", tickIconM);
+                }
+            }
+            for (let i = 0; i < allOptionsM; i++) {
+                option_listM.children[i].classList.add("disabled");
+            }
+            next_btnM.style.display = "block";
         }
     }
 }
