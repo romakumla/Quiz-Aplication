@@ -8,11 +8,12 @@
     <!--Links-->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styleMedium.css">
+    <link rel="stylesheet" href="styleHard.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
 
-    <title>Document</title>
+    <title>Quiz Application</title>
 </head>
 
 <body>
@@ -33,7 +34,7 @@
         <div class="level_box">
             <div><button class="easy">Easy</button></div>
             <div><button class="medium">Medium</button></div>
-            <div><button class="medium">Hard</button></div>
+            <div><button class="hard">Hard</button></div>
         </div>
     </div>
 
@@ -42,14 +43,14 @@
     <div class="info_box">
         <div class="info_title">Some Ruls of the Easy Level Quiz</div>
         <div class="info_list">
-            <div class="info">1. You will have only <span>60 seconds</span> per each question.</div>
-            <div class="info">2. Once you select your answer, you can't reselect.</div>
-            <div class="info">3. You can't select any options once time goes of.</div>
-            <div class="info">4. You can't exit from Quiz while you're playng.</div>
-            <div class="info">5. You will get <span>1 points</span> on the basis on your correct answer.</div>
+            <div class="info">1. You Will Have Only <span>60 Seconds</span> Per Each Question.</div>
+            <div class="info">2. Once You Select Your Answer, You Can't Reselect.</div>
+            <div class="info">3. You Can't Select Any Options Once Time Goes of.</div>
+            <div class="info">4. You Can't Exit From Quiz While You're Playng.</div>
+            <div class="info">5. You Will Get <span>1 Points</span> on the Basis on Your correct Answer.</div>
             <div class="buttons">
                 <button class="Exit">Exit Quiz</button>
-                <button class="continue">continue Quiz</button>
+                <button class="continue">Continue Quiz</button>
             </div>
         </div>
     </div>
@@ -60,7 +61,7 @@
         <header>
             <div class="title">Easy Quiz Applicaion</div>
             <div class="timer">
-                <div class="time_text">time left</div>
+                <div class="time_text">Time Left</div>
                 <div class="timer_sec">15</div>
                 <div class="time_line"></div>
             </div>
@@ -99,10 +100,10 @@
 
 
 
-    <!--Result Box-->
+    <!--Easy Result Box-->
     <div class="result_box">
         <div class="icon"><i class="fas fa-crown"></i></div>
-        <div class="complete_text">You have completed the Quiz!</div>
+        <div class="complete_text">You Have Completed the Quiz!</div>
         <div class="score_text">
             <!--<span>and sorry, you got only <p>2</p> out of <p>5</p></span>-->
         </div>
@@ -118,19 +119,18 @@
     <div class="info_boxM">
         <div class="info_titleM">Some Ruls of the Medium Level Quiz</div>
         <div class="info_listM">
-            <div class="infoM">1. You will have only <span>45 seconds</span> per each question.</div>
-            <div class="infoM">2. Once you select your answer, you can't reselect.</div>
-            <div class="infoM">3. You can't select any options once time goes of.</div>
-            <div class="infoM">4. You can't exit from Quiz while you're playng.</div>
-            <div class="infoM">5. You will get <span>2 points</span> on the basis on your correct answer.</div>
+            <div class="infoM">1. You Will Have Only <span>45 Seconds</span> Per Each Question.</div>
+            <div class="infoM">2. Once You Select Your Answer, You Can't Reselect.</div>
+            <div class="infoM">3. You Can't Select Any Options Once Time Goes of.</div>
+            <div class="infoM">4. You Can't Exit From Quiz While You're Playng.</div>
+            <div class="infoM">5. You Will Get <span>2 Points</span> on the Basis on Your Correct Answer.</div>
             <div class="buttonsM">
                 <button class="exitM">Exit Quiz</button>
-                <button class="continueM">continue Quiz</button>
+                <button class="continueM">Continue Quiz</button>
             </div>
         </div>
     </div>
 
-    <!--Medium Section-->
     <!--Quiz box Medium-->
     <div class="quiz_boxM">
         <header>
@@ -150,7 +150,7 @@
                     <span>Hyper Text Preprocessor</span>
                     <div class="icon tick"><i class="fas fa-check"></i></div>
                 </div>
-                <div class="option">
+                <div class="optionM">
                     <span>Hyper Text Markup Language</span>
                     <div class="icon cross"><i class="fas fa-times"></i></div>
                 </div>
@@ -177,7 +177,7 @@
     <!--Result Box Medium-->
     <div class="result_boxM">
         <div class="icon"><i class="fas fa-crown"></i></div>
-        <div class="complete_textM">You have completed the Quiz!</div>
+        <div class="complete_textM">You Have Completed the Quiz!</div>
         <div class="score_textM">
             <!--<span>and sorry, you got only <p>2</p> out of <p>5</p></span>-->
         </div>
@@ -188,11 +188,87 @@
     </div>
 
 
+    <!--Hard Section-->
+    <!--Info Bosx Medium-->
+    <div class="info_boxH">
+        <div class="info_titleH">Some Ruls of the Medium Level Quiz</div>
+        <div class="info_listH">
+            <div class="infoH">1. You will have only <span>45 seconds</span> per each question.</div>
+            <div class="infoH">2. Once you select your answer, you can't reselect.</div>
+            <div class="infoH">3. You can't select any options once time goes of.</div>
+            <div class="infoH">4. You can't exit from Quiz while you're playng.</div>
+            <div class="infoH">5. You will get <span>2 points</span> on the basis on your correct answer.</div>
+            <div class="buttonsH">
+                <button class="exitH">Exit Quiz</button>
+                <button class="continueH">Continue Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Quiz box Hard-->
+    <div class="quiz_boxH">
+        <header>
+            <div class="titleH">Hard Quiz Applicaion</div>
+            <div class="timerH">
+                <div class="time_textH"></div>
+                <div class="timer_secH">30</div>
+                <div class="time_lineH"></div>
+            </div>
+        </header>
+        <section>
+            <div class="que_textH">
+                <!--<span>What Does HTML Stand For</span>-->
+            </div>
+            <div class="option_listH">
+                <!--<div class="optionH">
+                    <span>Hyper Text Preprocessor</span>
+                    <div class="icon tick"><i class="fas fa-check"></i></div>
+                </div>
+                <div class="optionH">
+                    <span>Hyper Text Markup Language</span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="optionH">
+                    <span>Hyper Text Multiple Language</span>
+                </div>
+                <div class="optionH">
+                    <span>Hyper Text Multiple Language</span>
+                </div>
+            </div>-->
+        </section>
+
+        <footer>
+            <div class="total_queH">
+                <!--<span>
+                            <p>2</p>of<p>5</p>Questions
+                        </span>-->
+            </div>
+            <button class="next_btnH">Next</button>
+        </footer>
+
+    </div>
+
+    <!--Result Box Hard-->
+    <div class="result_boxH">
+        <div class="icon"><i class="fas fa-crown"></i></div>
+        <div class="complete_textH">You Have Completed the Quiz!</div>
+        <div class="score_textH">
+            <!--<span>and sorry, you got only <p>2</p> out of <p>5</p></span>-->
+        </div>
+        <div class="buttonsH">
+            <button class="restartH">Replay Quiz</button>
+            <button class="quitH">Quit Quiz</button>
+        </div>
+    </div>
+
+
     <!--Script JS-->
     <script src="script.js"></script>
     <script src="scriptMedium.js"></script>
+    <script src="scriptHard.js"></script>
     <script src="question.js"></script>
     <script src="questionMeidum.js"></script>
+    <script src="questionHard.js"></script>
 </body>
 
 </html>

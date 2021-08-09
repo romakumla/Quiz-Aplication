@@ -7,116 +7,9 @@
 body{
     background: #f6fff8;
 }
-.start_box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.3s ease;
-    padding: 10px;
-    background: #9ba9ff;
-    width: 550px;
-    border-radius: 5px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.start_box.hide{
-    display: none
-}
-
-.start_box input{
-    border-radius: 5px;
-    border-color: #a9d6e5;
-    outline: none;
-    border-width: 2px solid;
-    width: 200px;
-    height: 35px;
-    background: #f6fff8;;
-}
-.start_box button{
-    height: auto;
-    font-size: 15px;
-    font-weight: 600;
-    color: #474056;
-    background: #a9d6e5;
-    padding: 8px 15px;
-    outline: none;
-    border-color: #a9d6e5;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.start_box button.active{
-    pointer-events: none;
-    background: #fffffc;
-}
-
-/*LevelBox*/
-.levelBox{
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.3s ease;
-    transform: translate(-50%, -50%) scale(0.9);
-    width: 540px;
-    background: #fff;
-    border-radius: 5px;
-}
-.levelBox.show{
-    display: block;
-}
-
-.level_box{
-    padding: 5px;
-    background: #9ba9ff;
-    width: 550px;
-    border-radius: 5px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    outline: none;
-    border-color: #a9d6e5;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.level_box button{
-    height: auto;
-    font-size: 15px;
-    font-weight: 600;
-    color: #474056;
-    background: #a9d6e5;
-    padding: 15px 30px;
-    outline: none;
-    border: 1 solid #474056;
-    border-radius: 5px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-.leveltext{
-    padding-bottom: 5px;
-    display: flex;
-    justify-content: center;
-    
-}
-
-.level_text{
-    font-size: 20px;
-    font-weight: 600;
-    color: #474056;
-    position: absolute;
-    text-align: center;
-    margin:15px 0 10px 0;
-}
-
 
 /*Info Box*/
-.info_boxM{
+.info_boxH{
     display: none;
     position: absolute;
     top: 50%;
@@ -130,11 +23,11 @@ body{
     border-radius: 5px;
 }
     
-.info_boxM.show{
+.info_boxH.show{
 display: block;
 }
 
-.info_titleM{
+.info_titleH{
     height: 50px;
     width: 100%;
     border-bottom: 1.5px solid #474056;
@@ -147,21 +40,21 @@ display: block;
     color: #474056;
 }
 
-.info_listM{
+.info_listH{
     padding: 15px 35px;
 }
-.infoM{
+.infoH{
     margin: 5 0;
     font-size: 17px;
     font-weight: 600;
     color: #474056;
     padding-bottom: 10px;
 }
-.infoM span{
+.infoH span{
     font-weight: 600;
     color: #10002b;
 }
-.info_boxM .buttonsM {
+.info_boxH .buttonsH {
     height: 60px;
     width: 100%;
     display: flex;
@@ -171,7 +64,7 @@ display: block;
     border-top: 1.5px solid #474056;
 }
 
-.info_boxM .buttonsM button{
+.info_boxH .buttonsH button{
     margin: 0 5px;
     height: 40px;
     width: 100px;
@@ -189,7 +82,7 @@ display: block;
 
 /*Quiz Box*/
 
-.quiz_boxM{
+.quiz_boxH{
     display: none;
     position: absolute;
     top: 50%;
@@ -200,10 +93,10 @@ display: block;
     background: #a9d6e5;
     border-radius: 5px;
 }
-.quiz_boxM.show{
+.quiz_boxH.show{
     display: block;
 }
-.quiz_boxM header{
+.quiz_boxH header{
     position: relative;
 
     height: 70px;
@@ -217,13 +110,13 @@ display: block;
     border-bottom: 1.5px solid #474056; 
 }
 
-.quiz_boxM header .titleM{
+.quiz_boxH header .titleH{
     font-size: 20px;
     font-weight: 600;
     color: #474056;
 }
 
-.quiz_boxM header .timerM{
+.quiz_boxH header .timerH{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -235,14 +128,14 @@ display: block;
     padding: 0 8px;
 }
 
-.quiz_boxM header .timerM .time_textM{
+.quiz_boxH header .timerH .time_textH{
     font-size: 17px;
     font-weight: 600;
     user-select: none;
     color: #474056;
 }
 
-.quiz_boxM header .timerM .timer_secM{
+.quiz_boxH header .timerH .timer_secH{
     font-size: 18px;
     font-weight: 500;
     background: #474056;
@@ -256,7 +149,7 @@ display: block;
     user-select: none;
 }
 
-.quiz_boxM header .time_lineM{
+.quiz_boxH header .time_lineH{
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -264,24 +157,24 @@ display: block;
     background: #474056;
 }
 
-.quiz_boxM section{
+.quiz_boxH section{
     padding: 25px 30px 20px 30px;
     background: #cce5ff;
 }
 
-.quiz_boxM section .que_textM{
+.quiz_boxH section .que_textH{
     font-size: 25px;
     font-weight: 600;
     color: #474056;
 }
 
-.quiz_boxM section .option_listM{
+.quiz_boxH section .option_listH{
     padding: 20px 0;
     display: block;
     color: #474056;
 }
 
-.quiz_boxM section .option_listM .optionM{
+.quiz_boxH section .option_listH .optionH{
     background: #cce5ff;
     border: 1px solid #474056;
     border-radius: 5px;
@@ -296,11 +189,11 @@ display: block;
     transition: all 0.3s ease;
 }
 
-.option_listM .optionM:last-child{
+.option_listH .optionH:last-child{
     margin-bottom: 0;
 }
 
-.option_listM .optionM .icon{
+.option_listH .optionH .icon{
 height: 26px;
 width: 26px;
 border: 2px solid transparent;
@@ -311,33 +204,33 @@ line-height: 24px;
 pointer-events: none;
 }
 
-.option_listM .optionM .icon.tick{
+.option_listH .optionH .icon.tick{
     color: #23903c;
     border-color: #23903c ;
     background: #d4edda;
 }
 
-.option_listM .optionM .icon.cross{
+.option_listH .optionH .icon.cross{
     color: #a42834;
     border-color: #a42834 ;
     background: #f8d7da;
 }
 
-.option_listM .optionM.correct{
+.option_listH .optionH.correct{
     color: #155724;
     background: #d4edda;
     border-color: #c3e6cb ;
 }
-.option_listM .optionM.incorrect{
+.option_listH .optionH.incorrect{
     color: #721c24;
     background: #f8d7da;
     border-color: #f5c6cb ;
 }
-.option_listM .optionM.disabled{
+.option_listH .optionH.disabled{
     pointer-events: none;
 }
 
-.quiz_boxM footer{
+.quiz_boxH footer{
     height: 60px;
     width: 100%;
     padding: 0 30px;
@@ -346,21 +239,21 @@ pointer-events: none;
     justify-content: space-between;
 }
 
-.quiz_boxM footer .total_queM span{
+.quiz_boxH footer .total_queH span{
     display: flex;
     user-select: none;
 }
 
-.quiz_boxM footer .total_queM span p{
+.quiz_boxH footer .total_queH span p{
     font-weight: 500;
     padding: 0 5px;
 }
 
-.total_queM span p:first-child{
+.total_queH span p:first-child{
     padding-left: 0;
 }
 
-.quiz_boxM footer .next_btnM{
+.quiz_boxH footer .next_btnH{
     display: none;
     height: 40px;
     padding: 0 13px;
@@ -378,7 +271,7 @@ pointer-events: none;
 
 
 /*Result Box*/
-.result_boxM{
+.result_boxH{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -395,23 +288,23 @@ pointer-events: none;
     transform: translate(-50%, -50%) scale(0.9);
     display: none;
 }
-.result_boxM.show{
+.result_boxH.show{
     display: block;
 }
 
-.result_boxM .icon{
+.result_boxH .icon{
     font-size: 100px;
     color: #474056;
     margin-bottom: 10px;
 }
 
-.result_boxM .complete_textM{
+.result_boxH .complete_textH{
     font-size: 20px;
     font-weight: 500;
     color: #474056;
 }
 
-.result_boxM .score_textM span{
+.result_boxH .score_textH span{
     display: flex;
     margin: 10px 0;
     font-size: 18px;
@@ -421,7 +314,7 @@ pointer-events: none;
     color: #474056;
 }
 
-.score_textM span p{
+.score_textH span p{
     display: flex;
     justify-content: center;
     font-weight: 600;
@@ -429,13 +322,13 @@ pointer-events: none;
     color: #474056;
 }
 
-.result_boxM .buttonsM{
+.result_boxH .buttonsH{
     display: flex;
     margin: 20px 0;
     justify-content: center;
 }
 
-.result_boxM .buttonsM button{
+.result_boxH .buttonsH button{
     margin: 0 10px;
     height: 45px;
     padding: 0 20px;

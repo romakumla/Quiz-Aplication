@@ -173,7 +173,6 @@ function startTimerM(timeM) {
         timeM--;
         if (timeM < 9) {
             let addZero = timeCountM.textContent;
-            let addText
             timeCountM.textContent = "0" + addZero;
         }
         if (timeM < 0) {

@@ -19,6 +19,7 @@ let quit_quiz = result_box.querySelector(".buttons .quit");
 let firstName = document.getElementById("firstName").value;
 let lastName = document.getElementById("lastName").value;
 let medium_btn = document.querySelector(".medium");
+let hard_btn = document.querySelector(".hard");
 
 
 start_btn.onclick = () => {
@@ -35,8 +36,13 @@ easyBtn.onclick = () => {
     info_box.classList.add("show");
 }
 medium_btn.onclick = () => {
-    startBox.classList.add("hide");
+    levelBox.classList.remove("show");
     info_boxM.classList.add('show');
+}
+
+hard_btn.onclick = () => {
+    levelBox.classList.remove("show");
+    info_boxH.classList.add('show');
 }
 
 
