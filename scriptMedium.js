@@ -1,8 +1,4 @@
-//მერე წაიშლება
-let start_box = document.querySelector(".start_box");
-let strat_btn = document.querySelector(".start_btn");
-
-//ეს დარჩება
+//Declarations
 let quiz_boxM = document.querySelector(".quiz_boxM");
 let info_boxM = document.querySelector(".info_boxM");
 let exit_btnM = document.querySelector(".exitM");
@@ -16,10 +12,7 @@ let restart_quizM = document.querySelector(".restartM");
 let quit_quizM = document.querySelector(".quitM");
 let timeOffM = document.querySelector(".time_textM");
 
-strat_btn.onclick = () => {
-    start_box.classList.add("hide");
-    info_boxM.classList.add('show');
-}
+
 
 exit_btnM.onclick = () => {
     info_boxM.classList.remove('show');
