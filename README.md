@@ -1,6 +1,6 @@
 # Quiz-Aplication
 Qiz Aplication 
-It is Learning File How to Create Quiz Aplication with helpof HTML CSS and JavaScript.
+It is Learning File How to Create Quiz Aplication with Help of HTML CSS and JavaScript.
 
 Used Materials:
 
