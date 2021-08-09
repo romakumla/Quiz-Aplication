@@ -20,9 +20,11 @@ let firstName = document.getElementById("firstName").value;
 let lastName = document.getElementById("lastName").value;
 let medium_btn = document.querySelector(".medium");
 let hard_btn = document.querySelector(".hard");
-let User = firstName + lastName;
+let bottom_que_counter = quiz_box.querySelector('.total_que');
 
 
+
+//Start Button from Start Box
 start_btn.onclick = () => {
     let firstName = document.getElementById("firstName").value;
     let lastName = document.getElementById("lastName").value;
@@ -31,27 +33,40 @@ start_btn.onclick = () => {
     levelBox.classList.add("show");
 }
 
+function isEmpty() {
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
+    if (firstName != "" && lastName != "") {
+        start_btn.removeAttribute("disabled");
+    }
+}
 
+//Easy Button from Level Box
 easyBtn.onclick = () => {
     levelBox.classList.remove("show");
     info_box.classList.add("show");
 }
+
+//Medium Button from Level Box
 medium_btn.onclick = () => {
     levelBox.classList.remove("show");
     info_boxM.classList.add('show');
 }
 
+//Hard Button from Level Box
 hard_btn.onclick = () => {
     levelBox.classList.remove("show");
     info_boxH.classList.add('show');
 }
 
-
+//Exit Button from Info Box
 exit_btn.onclick = () => {
     levelBox.classList.remove("show");
     info_box.classList.remove("show");
     startBox.classList.remove('hide');
 }
+
+//Continue Button from Info Box
 continue_btn.onclick = () => {
     quiz_box.classList.add("show");
     info_box.classList.remove("show");
@@ -61,6 +76,7 @@ continue_btn.onclick = () => {
     startTimerLine(0);
 }
 
+//ShowQuestions
 function showQuestions(index) {
     let que_text = document.querySelector('.que_text');
     let que_tag = '<span>' + questions[index].numb + '. ' + questions[index].question + '</span>';
@@ -76,7 +92,7 @@ function showQuestions(index) {
     };
 }
 
-
+//Next Button from Quiz Box
 let que_count = 0;
 let que_numb = 1;
 let counter;
@@ -106,8 +122,9 @@ next_btn.onclick = () => {
         showResultBox();
     }
 }
-restart_quiz.onclick = () => {
 
+//Restart Button from Info Box
+restart_quiz.onclick = () => {
     quiz_box.classList.add("show");
     result_box.classList.remove("show");
     let que_count = 0;
@@ -145,17 +162,17 @@ restart_quiz.onclick = () => {
 }
 
 
-
+//Icons
 let tickIcon = '<div class="icon tick"><i class="fas fa-check"></i></div>';
 let crossIcon = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
+//Option Selected Function
 function optionSelected(answer) {
     clearInterval(counterLine);
     clearInterval(counter);
     let userAns = answer.textContent;
     let correctAns = questions[que_count].answer;
     let allOption = option_list.children.length;
-
     console.log(correctAns);
     if (userAns == correctAns) {
         userScore += 1;
@@ -169,7 +186,7 @@ function optionSelected(answer) {
         console.log("Answer is Wrong");
         answer.insertAdjacentHTML("beforeend", crossIcon);
 
-        //auto selec correctAns
+        //Auto Selec CorrectAns
         for (let i = 0; i < allOption; i++) {
             if (option_list.children[i].textContent == correctAns) {
                 option_list.children[i].setAttribute("class", "option correct")
@@ -178,15 +195,14 @@ function optionSelected(answer) {
         }
     }
 
-
-    //disabled
+    //Disabled Options
     for (let i = 0; i < allOption; i++) {
         option_list.children[i].classList.add("disabled");
     }
     next_btn.style.display = "block";
 }
 
-
+//Sow Results
 function showResultBox() {
     let firstName = document.getElementById("firstName").value;
     let lastName = document.getElementById("lastName").value;
@@ -209,8 +225,9 @@ function showResultBox() {
         scoreText.innerHTML = scoreTag;
         console.log(`User: ${User} Has Gained ${userScore} Points`);
     }
-};
-//set timer
+}
+
+//Set Timer
 function startTimer(time) {
     counter = setInterval(timer, 1000);
     function timer() {
@@ -239,10 +256,10 @@ function startTimer(time) {
             }
             next_btn.style.display = "block";
         }
-
     }
 }
 
+//Time Line
 function startTimerLine(time) {
     counterLine = setInterval(timer, 110);
     function timer() {
@@ -254,12 +271,12 @@ function startTimerLine(time) {
     }
 }
 
+//Quit Button From Result Box
 quit_quiz.onclick = () => {
     window.location.reload()//gadatvirTva
 }
 
-let bottom_que_counter = quiz_box.querySelector('.total_que');
-
+//Que Counter
 function queCounter(index) {
     let bottom_que_counter = quiz_box.querySelector('.total_que');
     let totalQuesCountTag = '<span><p>' + index + '</p>of<p>' + questions.length + '</p>Question</span>';

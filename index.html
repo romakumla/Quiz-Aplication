@@ -20,9 +20,9 @@
     <!--Start Box-->
     <div class="start_box">
         <div class="inputs">
-            <input type="text" id="firstName" placeholder="Enter Name" class="firstName" value="">
-            <input type="text" id="lastName" placeholder="Last Name" class="lastName" value="">
-            <button class="start_btn">Start Quiz</button>
+            <input type="text" id="firstName" placeholder="Enter Name" class="firstName" onkeyup="isEmpty()">
+            <input type="text" id="lastName" placeholder="Last Name" class="lastName" onkeyup="isEmpty()">
+            <button class="start_btn" title="Enter the First and Last Name" disabled>Start Quiz</button>
         </div>
     </div>
 

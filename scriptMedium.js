@@ -13,12 +13,13 @@ let quit_quizM = document.querySelector(".quitM");
 let timeOffM = document.querySelector(".time_textM");
 
 
-
+//Exit Button from Info Box Medium
 exit_btnM.onclick = () => {
     info_boxM.classList.remove('show');
     startBox.classList.remove("hide");
 }
 
+//Continue Button from Info Box Medium
 continue_btnM.onclick = () => {
     info_boxM.classList.remove('show');
     quiz_boxM.classList.add('show');
@@ -39,7 +40,7 @@ let userScoreM = 0;
 
 
 
-//Next Btn click
+//Next Button from Quiz Box
 next_btnM.onclick = () => {
     if (que_countM < questionsM.length - 1) {
         que_countM++;
@@ -61,6 +62,7 @@ next_btnM.onclick = () => {
     }
 }
 
+//Restart Button from Info Box medium
 restart_quizM.onclick = () => {
     start_box.classList.remove("hide");
     result_boxM.classList.remove("show");
@@ -78,11 +80,13 @@ restart_quizM.onclick = () => {
     timeOffM.textContent = "Time Left"
     next_btnM.style.display = "none";
 }
+
+//Quit Button from Result Box medium
 quit_quizM.onclick = () => {
     window.location.reload();
 }
 
-//Get Questions and options
+//Show Question Function For Medium Quiz
 function showQuestinM(index) {
     let que_textM = document.querySelector(".que_textM");
     let option_listM = document.querySelector(".option_listM")
@@ -96,10 +100,11 @@ function showQuestinM(index) {
     }
 }
 
-//icons
+//Icons
 let tickIconM = '<div class="icon tick"><i class="fas fa-check"></i></div>'
 let crossIconM = '<div class="icon cross"><i class="fas fa-times"></i></div>'
 
+//Select Option Function
 function optionMSelected(answerM) {
     clearInterval(counterLineM);
     clearInterval(counterM);
@@ -165,9 +170,7 @@ function queCounteM(index) {
     bottom_que_counterM.innerHTML = totalQuesCounterTagM;
 }
 
-
 //Time Set
-
 function startTimerM(timeM) {
     counterM = setInterval(timer, 1000);
     function timer() {
@@ -199,7 +202,6 @@ function startTimerM(timeM) {
 }
 
 //TimeLine Set
-
 function startTimerLineM(timeM) {
     counterLineM = setInterval(timer, 84);
     function timer() {

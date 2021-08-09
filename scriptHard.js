@@ -13,12 +13,13 @@ let quit_quizH = document.querySelector(".quitH");
 let timeOffH = document.querySelector(".time_textH");
 
 
-
+//Exit Button From Info Box Hard
 exit_btnH.onclick = () => {
     info_boxH.classList.remove('show');
     startBox.classList.remove("hide");
 }
 
+//Continue Button From Info Box Hard
 continue_btnH.onclick = () => {
     info_boxH.classList.remove('show');
     quiz_boxH.classList.add('show');
@@ -39,7 +40,7 @@ let userScoreH = 0;
 
 
 
-//Next Btn click
+//Next Button From Quiz Box Hard
 next_btnH.onclick = () => {
     if (que_countH < questionsH.length - 1) {
         que_countH++;
@@ -60,6 +61,7 @@ next_btnH.onclick = () => {
     }
 }
 
+//Restart Button 
 restart_quizH.onclick = () => {
     start_box.classList.remove("hide");
     result_boxH.classList.remove("show");
@@ -96,7 +98,7 @@ function showQuestinH(index) {
     }
 }
 
-//icons
+//Icons
 let tickIconH = '<div class="icon tick"><i class="fas fa-check"></i></div>'
 let crossIconH = '<div class="icon cross"><i class="fas fa-times"></i></div>'
 
@@ -134,7 +136,7 @@ function optionHSelected(answerH) {
 }
 
 
-//Show Result Box
+//Show Result Box For Hard Qiuz Box
 function showResultBoxH() {
     let firstName = document.getElementById("firstName").value;
     let lastName = document.getElementById("lastName").value;

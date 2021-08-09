@@ -48,10 +48,6 @@ body{
     border-radius: 5px;
     cursor: pointer;
 }
-.start_box button.active{
-    pointer-events: none;
-    background: #fffffc;
-}
 
 /*LevelBox*/
 .levelBox{
