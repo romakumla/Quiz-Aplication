@@ -69,13 +69,13 @@ let questionsM = [
     },
     {
         numbM: 7,
-        questionM: "Which Command Will Create a New Object Instance for the Person Class Called 'Student'?",
-        answerM: "let student = new Person();",
+        questionM: "Which command is used to skip any specific iteration in the loop (skip)?",
+        answerM: "Continue",
         optionsM: [
-            "let student = Person();",
-            "let student = construct Person();",
-            "let student = new Person();",
-            "let student = construct Person;"
+            "Skip",
+            "Pass",
+            "Continue",
+            "Break"
         ]
     },
     {
